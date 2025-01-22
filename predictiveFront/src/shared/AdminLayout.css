@@ -1,0 +1,105 @@
+.admin-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.admin-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+}
+
+.admin-logo {
+    height: 40px;
+    width: 178px;
+}
+
+.admin-top-bar-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    /* Set color to match button color */
+}
+
+.admin-top-bar-links a:hover {
+    color: #e62a29;
+    /* Hover effect for disconnect button */
+}
+
+.admin-main-content-wrapper {
+    display: flex;
+    flex-grow: 1;
+}
+
+.admin-sidebar {
+    width: 200px;
+    background-color: lightgray;
+    /* Updated to light gray */
+    padding-top: 10px;
+}
+
+.admin-sidebar-item {
+    color: #000;
+    /* Dark text color for visibility */
+    background-color: lightgray;
+    /* Ensure buttons match sidebar background */
+    width: 100%;
+    /* Full width buttons */
+    display: block;
+    /* Ensure buttons take full width */
+    text-align: left;
+    /* Align text to the left */
+    border: none;
+    /* Remove default borders */
+    padding: 10px;
+    /* Add padding */
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
+}
+
+.admin-sidebar-item.active {
+    color: white;
+    background-color: #e62a29;
+    /* Highlighted button color */
+}
+
+.admin-main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* AdminDashboard.css */
+.admin-dashboard {
+    margin: 20px;
+}
+
+.admin-dashboard .btn-primary,
+.admin-dashboard .btn-danger {
+    background-color: #e62a29;
+    border-color: #e62a29;
+}
+
+.admin-dashboard .btn-primary:hover,
+.admin-dashboard .btn-danger:hover {
+    background-color: #e62a29;
+    border-color: #e62a29;
+}
+
+.admin-dashboard .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.admin-dashboard .btn-warning:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.admin-dashboard .table {
+    margin-top: 20px;
+}

@@ -1,0 +1,44 @@
+/* src/components/SousZonesManagement.css */
+
+.sous-zones-management {
+    padding: 20px;
+}
+
+.sous-zones-management .table {
+    margin-top: 20px;
+}
+
+.sous-zones-management .btn {
+    margin-right: 10px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Ensure button styles are consistent with ZonesManagement */
+.sous-zones-management .btn-primary,
+.sous-zones-management .btn-danger {
+    background-color: #e62a29;
+    border-color: #e62a29;
+}
+
+.sous-zones-management .btn-primary:hover,
+.sous-zones-management .btn-danger:hover {
+    background-color: #e62a29;
+    border-color: #e62a29;
+}
+
+.sous-zones-management .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.sous-zones-management .btn-warning:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}

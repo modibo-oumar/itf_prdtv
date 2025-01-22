@@ -1,0 +1,72 @@
+/* SocieteManagement.css */
+
+/* Styling for the top bar links */
+.societe-top-bar-links a {
+    color: #e62a29;
+    text-decoration: none;
+}
+
+.societe-top-bar-links a:hover {
+    color: #e62a29;
+    /* Ensure hover matches button color */
+}
+
+/* Sidebar styling */
+.societe-sidebar {
+    width: 200px;
+    background-color: lightgray;
+    /* Light gray sidebar */
+}
+
+.societe-sidebar-item {
+    color: #000;
+    /* Dark text color for visibility */
+    background-color: lightgray;
+    /* Match sidebar background */
+    width: 100%;
+    /* Full width buttons */
+    display: block;
+    /* Ensure buttons take full width */
+    text-align: left;
+    /* Align text to the left */
+    border: none;
+    /* Remove default borders */
+    padding: 10px;
+    /* Add padding */
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
+}
+
+.societe-sidebar-item.active {
+    color: white;
+    background-color: #e62a29;
+    /* Highlighted button color */
+}
+
+/* Styling for buttons in the SocieteManagement component */
+.societe-management .btn-primary,
+.societe-management .btn-danger {
+    background-color: #e62a29;
+    border-color: #e62a29;
+}
+
+.societe-management .btn-primary:hover,
+.societe-management .btn-danger:hover {
+    background-color: #e62a29;
+    border-color: #e62a29;
+}
+
+.societe-management .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.societe-management .btn-warning:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+/* Table styling */
+.societe-management .table {
+    margin-top: 20px;
+}

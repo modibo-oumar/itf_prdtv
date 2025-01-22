@@ -1,0 +1,44 @@
+/* src/components/ElementsManagement.css */
+
+.elements-management {
+    padding: 20px;
+}
+
+.elements-management .table {
+    margin-top: 20px;
+}
+
+.elements-management .btn {
+    margin-right: 10px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Ensure button styles are consistent with other management pages */
+.elements-management .btn-primary,
+.elements-management .btn-danger {
+    background-color: #e62a29;
+    border-color: #e62a29;
+}
+
+.elements-management .btn-primary:hover,
+.elements-management .btn-danger:hover {
+    background-color: #e62a29;
+    border-color: #e62a29;
+}
+
+.elements-management .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.elements-management .btn-warning:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}

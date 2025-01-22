@@ -1,0 +1,253 @@
+:root {
+  --top-bar-height: 50px;
+  --line-color: #b3b3b3;
+  --highlight-color: #e6e6e6;
+  --item-bg-color: #f9f9f9;
+  --item-hover-bg-color: #f0f0f0;
+  --num-bg-color: #333;
+  --num-color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+  width: 400px;
+}
+
+.top-bar {
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--top-bar-height);
+  z-index: 1000;
+}
+
+.logo {
+  height: 45px;
+  width: 250px;
+  cursor: default !important;
+}
+
+.top-bar-links {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.top-bar-links a {
+  color: black;
+  margin-left: 15px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.top-bar-links a:hover {
+  color: #e62a29;
+}
+
+.sidebar {
+  height: calc(100vh - var(--top-bar-height));
+  width: 300px !important;
+  position: fixed;
+  top: var(--top-bar-height);
+  left: 0;
+  z-index: 100;
+  transition: width 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--line-color);
+  background-color: var(--item-bg-color);
+}
+
+.sidebar-toggle {
+  background-color: #d9d9d9;
+  border: none;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  z-index: 101;
+  margin-top: 20px;
+  width: 30px;
+}
+
+.sidebar-toggle.white-background {
+  background-color: white;
+}
+
+/* Tree Structure */
+.tree-structure {
+  list-style: none;
+  clear: both;
+  padding-left: 15px;
+  margin-top: 50px;
+}
+
+.tree-structure li {
+  position: relative;
+  margin-bottom: 12px;
+  background-color: var(--item-bg-color);
+  border-radius: 4px;
+}
+
+/* Vertical line connecting parent to child */
+.tree-structure li>.num:before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 2px;
+  background-color: var(--line-color);
+  height: 100%;
+  z-index: -1;
+  display: none;
+  /* Hide by default */
+}
+
+.tree-structure li.expanded>.num:before {
+  display: block;
+  /* Show vertical line for expanded items */
+}
+
+.tree-structure li>.num:after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  width: 2px;
+  background-color: var(--line-color);
+  z-index: -1;
+  height: calc(100% - 10px);
+}
+
+.tree-structure li>.num:before {
+  height: calc(100% - 12px);
+}
+
+/* Line continuation for children */
+.tree-structure ol {
+  padding: 0;
+  margin: 0;
+}
+
+.tree-structure ol li {
+  list-style-type: none;
+  position: relative;
+  padding: 8px 0;
+  margin-left: 20px;
+  /* Space between parent and child */
+}
+
+.tree-structure ol li:before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 2px;
+  background-color: var(--line-color);
+  height: 100%;
+  z-index: -1;
+  display: none;
+  /* Hide by default */
+}
+
+.tree-structure ol li.expanded:before {
+  display: block;
+  /* Show vertical line for expanded items */
+}
+
+.tree-structure ol li:last-child:before {
+  height: 50%;
+  /* Adjust to stop at the last child */
+}
+
+.tree-structure ol li .num:before {
+  content: none;
+}
+
+.tree-structure li a {
+  font-weight: normal;
+  text-decoration: none;
+  font-weight: 700;
+  vertical-align: middle;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: calc(100% - 50px);
+  vertical-align: top;
+}
+
+.tree-structure li a:hover {
+  padding-left: 5px;
+}
+
+.tree-structure>li>.num {
+  display: inline-block;
+  background: var(--num-bg-color);
+  min-width: 24px;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+  padding: 3px 9px;
+  margin-right: 10px;
+  color: var(--num-color);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.tree-structure>li>.num:after {
+  content: none;
+}
+
+.tree-structure>li:last-child>.num:after {
+  content: none;
+}
+
+.tree-structure ol li .num {
+  position: relative;
+}
+
+.tree-structure ol li a {
+  color: #000;
+  font-weight: normal;
+}
+
+.tree-structure .num {
+  background-color: #666;
+  min-width: 24px;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+  padding: 3px 9px;
+  margin-right: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tree-structure ol li .num:before {
+  content: none;
+}
+
+.main-content {
+  margin-left: 300px !important;
+  margin-top: var(--top-bar-height);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.collapsed~.main-content {
+  margin-left: 50px;
+}

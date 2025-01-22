@@ -1,0 +1,76 @@
+.user-top-bar-links a {
+    color: #e62a29;
+    text-decoration: none;
+}
+
+.user-top-bar-links a:hover {
+    color: #e62a29;
+    /* Ensure hover matches button color */
+}
+
+.user-sidebar {
+    width: 200px;
+    background-color: lightgray;
+    /* Light gray sidebar */
+}
+
+.user-sidebar-item {
+    color: #000;
+    /* Dark text color for visibility */
+    background-color: lightgray;
+    /* Match sidebar background */
+    width: 100%;
+    /* Full width buttons */
+    display: block;
+    /* Ensure buttons take full width */
+    text-align: left;
+    /* Align text to the left */
+    border: none;
+    /* Remove default borders */
+    padding: 10px;
+    /* Add padding */
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
+}
+
+.user-sidebar-item.active {
+    color: white;
+    background-color: #e62a29;
+    /* Highlighted button color */
+}
+
+.user-dashboard .btn-primary,
+.user-dashboard .btn-danger {
+    background-color: #e62a29;
+    border-color: #e62a29;
+}
+
+.user-dashboard .btn-primary:hover,
+.user-dashboard .btn-danger:hover {
+    background-color: #e62a29;
+    border-color: #e62a29;
+}
+
+.user-dashboard .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.user-dashboard .btn-warning:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.user-dashboard .table {
+    margin-top: 20px;
+}
+
+.zone-dropdown {
+    max-height: 200px; /* Adjust the height as needed */
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.dropdown-menu {
+    width: 100%;
+}

@@ -1,0 +1,219 @@
+/* Define a variable for the top bar height */
+:root {
+  --top-bar-height: 50px;
+  /* Adjust this value to the height you desire */
+}
+
+/* Ensure container fills the screen */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Top bar styling */
+.top-bar {
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--top-bar-height);
+  z-index: 1000;
+}
+
+.logo {
+  height: 45px;
+  width: 250px;
+  cursor: pointer;
+}
+
+.top-bar-links {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.top-bar-links a {
+  color: black;
+  margin-left: 15px;
+  text-decoration: none;
+  padding: 10px;
+  /* Add padding for visibility */
+}
+
+.top-bar-links a:hover {
+  color: #e62a29;
+}
+
+/* Sidebar styling */
+.sidebar {
+  height: calc(100vh - var(--top-bar-height));
+  /* Adjust based on top bar height */
+  width: 250px;
+  position: fixed;
+  top: var(--top-bar-height);
+  /* Adjust based on top bar height */
+  left: 0;
+  z-index: 100;
+  transition: width 0.3s;
+  overflow: hidden;
+  /* Hide overflow when collapsed */
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #d9d9d9;
+  /* Add right border */
+}
+
+.sidebar.collapsed {
+  width: 50px;
+}
+
+.sidebar-toggle {
+  background-color: #d9d9d9;
+  /* Match sidebar color */
+  border: none;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  z-index: 101;
+  /* Ensure button is above the sidebar content */
+  margin-top: 20px;
+  width: 30px;
+}
+
+.sidebar-toggle.white-background {
+  background-color: white;
+  /* Change background color when sidebar is collapsed */
+}
+
+.sidebar-nav {
+  margin-top: 50px;
+  /* Leave space for the toggle button */
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  /* Adjust padding as needed */
+  padding-right: 10px;
+  /* Adjust padding as needed */
+}
+
+.sidebar-nav a {
+  display: block;
+  color: black;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.sidebar-nav a:hover {
+  background-color: #e62a29;
+  color: white;
+}
+
+/* Main content styling */
+.main-content {
+  margin-left: 250px;
+  /* Adjust for sidebar width */
+  margin-top: var(--top-bar-height);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.collapsed~.main-content {
+  margin-left: 50px;
+}
+
+.bilan-header {
+  background-color: #d9d9d9;
+  /* Match the top bar color */
+  text-align: center;
+  padding: 0.5px;
+  color: #e62a29;
+  justify-self: left;
+}
+
+.sidebar.collapsed~.bilan-header {
+  margin-left: 50px;
+}
+
+/* Centering wrapper */
+.center-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center horizontally */
+  justify-content: center;
+  /* Center vertically */
+}
+
+/* Equipment table styling */
+.equipment-table {
+  width: 80%;
+  /* Adjust the width as needed */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.equipment-table th,
+.equipment-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  /* Center align text */
+}
+
+.equipment-table th {
+  background-color: #f2f2f2;
+}
+
+/* Key and circle styling */
+.key {
+  margin-bottom: 20px;
+}
+
+.key p {
+  margin: 5px 0;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: #FFBF00;
+}
+
+.orange {
+  background-color: #F28C28;
+}
+
+.red {
+  background-color: red;
+}
+
+.greetings {
+  margin: 20px;
+}
+
+.equipment-link {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+.circle.black {
+  background-color: black;
+}

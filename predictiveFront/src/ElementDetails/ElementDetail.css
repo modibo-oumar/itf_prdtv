@@ -1,0 +1,134 @@
+.element-detail-container {
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.banner {
+    background-color: #d9d9d9;
+    padding: 10px;
+    color: #e62a29;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: default;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.clickable-banner {
+    cursor: pointer;
+}
+
+.banner h2 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.arrow {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    color: red;
+    transition: transform 0.3s ease;
+}
+
+.arrow.rotated {
+    transform: rotate(90deg);
+}
+
+.info-section {
+    margin: 20px 0;
+}
+
+.info-section p {
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+.section-content {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+}
+
+.element-detail-container h2 {
+    margin-bottom: 20px;
+}
+
+.element-detail-container p {
+    margin: 10px 0;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e62a29;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background-color: #aa0404;
+}
+
+.synoptique-image {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Updated table styles */
+.mesures-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mesures-table th,
+.mesures-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.mesures-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+.mesures-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.mesures-table tbody tr:hover {
+    background-color: #e6f7ff;
+    cursor: pointer;
+}
+
+.toggle-view-button {
+    margin: 10px 0;
+    padding: 8px 16px;
+    background-color: #e62a29;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.toggle-view-button:hover {
+    background-color: #aa0404;
+}
